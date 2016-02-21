@@ -1,8 +1,22 @@
 ﻿.centered{
-	margin: 0 auto;
+	width: 300px;
+	height: 100px;
+
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	margin: auto;
 }
+
+
 
 input{
 	text-align: right;
-	width: 100%;
+}
+
+#resultTable{
+	border: 1px solid black;
 }

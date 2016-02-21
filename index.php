@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<title>Calculador de Impostos CLT</title>
-    <style type="text/css">
-        #inputTable{
-            margin: 0 auto;
-        }
-
-        input{
-            text-align: right;
-        }
-    </style>
+    
 </head>
 <body>
     <div id="inputTable" class="centered"> 
