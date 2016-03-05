@@ -9,9 +9,10 @@
     <div id="inputTable" class="centered"> 
         <form action="index.php" method="post">
             <table>
+
                 <tr>
                     <td>Insira seu salário:</td>
-                    <td><input type="text" name="salary"   value="<?php echo $_POST['salary'];?>" placeholder="1000" align="right"></input></td>
+                    <td><input type="number" name="salary" value="<?php echo $_POST['salary'];?>" placeholder="1000" align="right"></input></td>
                 </tr>
                 <tfoot>
                     <tr>
@@ -22,9 +23,12 @@
         </form>
         <?php
             //Recupera o salario como dado de input pelo usuario
-            $salary =  $_POST['salary'];
-            if($salary!='') {        
-                require_once('calculate.php');
+           
+            if(isset($_POST['salary'])){
+                 $salary = $_POST['salary'];
+                 if($salary!='') {        
+                    require_once('calculate.php');
+                }
             };  
         ?>
     </div>
