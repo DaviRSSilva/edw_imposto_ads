@@ -6,24 +6,23 @@
     
 </head>
 <body>
+    
     <div id="inputTable" class="centered"> 
+        <div class="title">
+            <h2>CALCULADOR DE SALÁRIO LIQUIDO</h2>      
+        </div>
         <form action="index.php" method="post">
-            <table>
+           <div class="salaryInput">
 
-                <tr>
-                    <td>Insira seu salário:</td>
-                    <td><input type="number" name="salary" value="<?php echo $_POST['salary'];?>" placeholder="1000" align="right"></input></td>
-                </tr>
-                <tfoot>
-                    <tr>
-                        <td colspan="2"><input type="submit" style="float: right" value="Calcular"/></td>
-                    </tr>
-                </tfoot>
-            </table>
+                <p>
+                    Salário bruto:
+                    <input type="number"  class="shadowedDiv salary"name="salary" value="<?php echo $_POST['salary'];?>" placeholder="1000" align="right"></input>
+                </p>
+            </div>
         </form>
+        <div class="shadowedDiv">
         <?php
             //Recupera o salario como dado de input pelo usuario
-           
             if(isset($_POST['salary'])){
                  $salary = $_POST['salary'];
                  if($salary!='') {        
@@ -31,6 +30,7 @@
                 }
             };  
         ?>
+        </div>
     </div>
    
 

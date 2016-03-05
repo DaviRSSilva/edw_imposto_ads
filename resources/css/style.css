@@ -1,14 +1,73 @@
 ﻿.centered{
-	width: 300px;
-	height: 100px;
-
+	width: 40%;
+	height: 10%;
 	position: absolute;
-	top:0;
+	top: -50%;
 	bottom: 0;
 	left: 0;
-	right: 0;
-	
+	right: 0;	
 	margin: auto;
+}
+
+.salary{
+	width: 70%;
+}
+p{
+	text-align: center;
+}
+input{
+	border: 0;
+}
+.salaryInput{
+	width: 100%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+
+}
+
+h2{
+	text-align: center;
+}
+.title{
+	background: #FFFFFF
+
+}
+
+body{
+	background: #EBEBEB
+}
+
+.shadowedDiv{
+		
+		box-shadow: -2px 2px 2px #888888;
+		background: #FFFFFF
+}
+
+h3{
+	text-shadow: 1px;
+}
+.centered td,
+.centered th
+{
+    text-align:left;
+}
+
+.centered td + td,
+.centered th + th
+{
+    text-align:center
+}
+
+.totalTable{
+	width: 96%;
+	margin-top: 10px;
+	height: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.totalTable tr{
+	line-height: 25px;
 }
 
 
@@ -17,6 +76,16 @@ input{
 	text-align: right;
 }
 
-#resultTable{
-	border: 1px solid black;
+.discountsTable{
+	border-bottom: 2px solid #EBEBEB;
+	width: 96%;
+	margin-top: 10px;
+	height: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+
+}
+
+.discountsTable tr{
+	line-height: 25px;
 }

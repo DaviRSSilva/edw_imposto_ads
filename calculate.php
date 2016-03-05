@@ -20,17 +20,50 @@
 		};
 
 	?>
-		<table style="margin-top: 10px; width: 100%" id="resultTable">
+		
+		<table class='discountsTable'>
+			<thead>
+				<tr>
+					<td>Descontos</td>
+					<td/>
+					<td>Valor</td>
+				</tr>
+			</thead>
 			<?php
 				$salaryArray = valueAndDiscountsArray($salary);
+				$totalSalary = $salary;
+				$totalDiscount = 0;
 				//Pega a array retornada e monta uma tabela;
 				for($index = 0; $index < count($salaryArray); $index++){
-						$value = $salaryArray[$index]; ?>
+						$value = $salaryArray[$index]; 
+						$totalSalary -= $value->getDiscountValue(); 
+						$totalDiscount += $value->getDiscountValue()?>
 					<tr>
 						<td><?php echo $value->getName();?></td>
 						<td><?php echo $value->getPercentage()."%";?></td>
-						<td><?php echo $value->getDiscountValue();?></td>
-					</tr>						
+						<td><?php echo "R$".number_format($value->getDiscountValue(), 2, ',', '');?></td>
+					</tr>					
 			<?php }?>
+			</table>
+			<table class='totalTable'>
+			<tr>
+
+				<td>
+					Total de descontos
+				</td>
+				<td/>
+				<td><?php echo "R$".number_format($totalDiscount, 2, ',', '');?></td>
+				
+			</tr>
+			<tr>
+
+				<td>
+					Salário Liquido
+				</td>
+				<td/>
+				<td><?php echo "R$".number_format($totalSalary, 2, ',', '');?></td>
+				
+			</tr>
+			</tfoot>
 		</table>
 </div>
