@@ -82,7 +82,9 @@ class IR extends Desconto{
 		$this->calculate($salaryValue);
 	}	
 }
-
+/**
+	Classe que abstrai a relacao da porcentagem, o valor maximo do salario e dedução no caso do IR
+**/
 class DiscountAndValue{
 
 		public $percentage;
