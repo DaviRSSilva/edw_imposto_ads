@@ -1,6 +1,8 @@
 <?php
 
-
+/**
+	Classe genenrica de desconto
+**/
 class Desconto{
 
 	public $name;
@@ -11,11 +13,13 @@ class Desconto{
 	public  static $discountsAndValues;
 
 	public function __construct($name){
+		//define o nome do imposto a partir do construtor
 		$this->name = $name;
 	}
 
 	public function calculate($value){
 		$this->currentValue = $value;
+		//Encontra o intervalo que corresponde ao valor atual
 		foreach ($this->discountsAndValues as $key => $discountAndValue) {
 			if($value <= $discountAndValue->getMaxValue()){
 				$this->currentDiscount = $discountAndValue->calculateValue($value);
@@ -42,7 +46,9 @@ class Desconto{
 		return $this->name;
 	}
 }
-
+/**
+	Classe do INSS com seus limites e porcentagens
+**/
 class INSS extends Desconto{
 
 
@@ -55,7 +61,9 @@ class INSS extends Desconto{
 	}
 
 }
-
+/**
+	Classe do IR com seus limites e porcentagens e Deducao
+**/
 class IR extends Desconto{
 
 
