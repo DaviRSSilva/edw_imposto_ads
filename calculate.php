@@ -24,7 +24,7 @@
 		<table class='discountsTable'>
 			<thead>
 				<tr>
-					<td>Descontos</td>
+					<td><p style="text-align: left;"><font style="font-size: 140%;text-align: left;">Descontos</font></p></td>
 					<td/>
 					<td>Valor</td>
 				</tr>
@@ -39,31 +39,31 @@
 						$totalSalary -= $value->getDiscountValue(); 
 						$totalDiscount += $value->getDiscountValue()?>
 					<tr>
-						<td><?php echo $value->getName();?></td>
+						<td><font color="#595959"><b><?php echo $value->getName();?></font><b></td>
 						<td><?php echo $value->getPercentage()."%";?></td>
-						<td><?php echo "R$".number_format($value->getDiscountValue(), 2, ',', '');?></td>
+						<td>
+							<font color="#FF4B4B"><?php echo "R$".number_format($value->getDiscountValue(), 2, ',', '');?></font>
+						</td>
 					</tr>					
 			<?php }?>
 			</table>
-			<table class='totalTable'>
+		<table class='totalTable'>
 			<tr>
-
-				<td>
+				<td colspan="2">	
 					Total de descontos
 				</td>
-				<td/>
-				<td><?php echo "R$".number_format($totalDiscount, 2, ',', '');?></td>
+				<td><font color="#FF4B4B"><?php echo "R$".number_format($totalDiscount, 2, ',', '');?></font></td>
 				
 			</tr>
 			<tr>
-
-				<td>
+				<td colspan="2">
+				<b>
 					Salário Liquido
+					</b>
 				</td>
-				<td/>
-				<td><?php echo "R$".number_format($totalSalary, 2, ',', '');?></td>
+				<td><font color="#558ED5" ><b><?php echo "R$".number_format($totalSalary, 2, ',', '');?></b></font></td>
 				
 			</tr>
-			</tfoot>
 		</table>
+		<br>
 </div>

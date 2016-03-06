@@ -14,9 +14,9 @@
         <form action="index.php" method="post">
            <div class="salaryInput">
 
-                <p>
-                    Salário bruto:
-                    <input type="number"  class="shadowedDiv salary"name="salary" value="<?php echo $_POST['salary'];?>" placeholder="1000" align="right"></input>
+                <p><b>
+                    Salário bruto (R$):</b>
+                    <input type="number"  class="shadowedDiv salary"name="salary" step="0.01" value="<?php echo $_POST['salary'];?>" placeholder="1000" align="right" ></input>
                 </p>
             </div>
         </form>

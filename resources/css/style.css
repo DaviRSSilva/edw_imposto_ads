@@ -1,6 +1,6 @@
 ﻿.centered{
 	width: 40%;
-	height: 10%;
+	height: 25%;
 	position: absolute;
 	top: -50%;
 	bottom: 0;
@@ -8,12 +8,23 @@
 	right: 0;	
 	margin: auto;
 }
+body{
+	font-family: 'GeosansLight';
+	font-size: 150%;
+	color: rgb(127,127,127);
+}
+@font-face{
+    font-family: "GeosansLight";
+    src: url('../fonts/GeosansLight.ttf'),
+    url('Thonburi-Bold.eot'); /* IE */
+}
 
 .salary{
-	width: 70%;
+	width: 65%;
 }
 p{
 	text-align: center;
+	font-family: 'GeosansLight';
 }
 input{
 	border: 0;
@@ -26,8 +37,14 @@ input{
 
 }
 
+
 h2{
 	text-align: center;
+	font-family: 'GeosansLight';
+}
+h3{
+	
+	font-family: 'GeosansLight';
 }
 .title{
 	background: #FFFFFF
@@ -46,6 +63,7 @@ body{
 
 h3{
 	text-shadow: 1px;
+	text-decoration-style: dashed;;
 }
 .centered td,
 .centered th
@@ -60,20 +78,23 @@ h3{
 }
 
 .totalTable{
-	width: 96%;
+	width: 98%;
 	margin-top: 10px;
 	height: 0;
 	margin-left: 2%;
 	margin-right: 2%;
+	margin-bottom: 10px
 }
 .totalTable tr{
-	line-height: 25px;
+	line-height: 35px;
 }
-
 
 
 input{
 	text-align: right;
+	font-family: 'GeosansLight';
+	font-size: 115%;
+	color:#558ED5;
 }
 
 .discountsTable{
@@ -88,4 +109,5 @@ input{
 
 .discountsTable tr{
 	line-height: 25px;
+	margin-bottom: 10px;
 }
