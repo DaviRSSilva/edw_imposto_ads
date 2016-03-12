@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	<title>Calculador de Impostos CLT</title>
+	<meta charset="UTF-8"
     
 </head>
 <body>
