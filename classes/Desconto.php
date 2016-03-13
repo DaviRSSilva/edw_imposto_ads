@@ -20,7 +20,7 @@ class Desconto{
 	public function calculate($value){
 		$this->currentValue = $value;
 		//Encontra o intervalo que corresponde ao valor atual
-		foreach ($this->discountsAndValues as $key => $discountAndValue) {
+		foreach (self::$discountsAndValues as $key => $discountAndValue) {
 			if($value <= $discountAndValue->getMaxValue()){
 				$this->currentDiscount = $discountAndValue->calculateValue($value);
 				$this->currentPecentage = $discountAndValue->getAssociatedPercentage();
@@ -35,7 +35,7 @@ class Desconto{
 	}
 
 	public function getDiscountName(){
-		return $this->$name;
+		return self::$name;
 	}
 
 	public function getDiscountValue(){
@@ -54,9 +54,9 @@ class INSS extends Desconto{
 
 	public function __construct($salaryValue){		
 		parent::__construct("INSS");
-		$this->discountsAndValues[0] = new DiscountAndValue(8, 1556.94, 0);
-		$this->discountsAndValues[1] = new DiscountAndValue(9, 2594.92, 0);
-		$this->discountsAndValues[2] = new DiscountAndValue(11, PHP_INT_MAX, 0);
+		self::$discountsAndValues[0] = new DiscountAndValue(8, 1556.94, 0);
+		self::$discountsAndValues[1] = new DiscountAndValue(9, 2594.92, 0);
+		self::$discountsAndValues[2] = new DiscountAndValue(11, PHP_INT_MAX, 0);
 		parent::calculate($salaryValue);
 	}
 
@@ -74,11 +74,11 @@ class IR extends Desconto{
 		define('IR_DEDUCAO_C', 354.8);
 		define('IR_DEDUCAO_D', 636.13);
 		define('IR_DEDUCAO_E', 869.36);
-		$this->discountsAndValues[0] = new DiscountAndValue(0, 1903.98, IR_DEDUCAO_A);
-		$this->discountsAndValues[1] = new DiscountAndValue(7.5, 2826.65, IR_DEDUCAO_B);
-		$this->discountsAndValues[2] = new DiscountAndValue(15, 3751.05, IR_DEDUCAO_C);
-		$this->discountsAndValues[3] = new DiscountAndValue(22.5, 4664.68, IR_DEDUCAO_D);
-		$this->discountsAndValues[4] = new DiscountAndValue(27.5, PHP_INT_MAX, IR_DEDUCAO_E);
+		self::$discountsAndValues[0] = new DiscountAndValue(0, 1903.98, IR_DEDUCAO_A);
+		self::$discountsAndValues[1] = new DiscountAndValue(7.5, 2826.65, IR_DEDUCAO_B);
+		self::$discountsAndValues[2] = new DiscountAndValue(15, 3751.05, IR_DEDUCAO_C);
+		self::$discountsAndValues[3] = new DiscountAndValue(22.5, 4664.68, IR_DEDUCAO_D);
+		self::$discountsAndValues[4] = new DiscountAndValue(27.5, PHP_INT_MAX, IR_DEDUCAO_E);
 		$this->calculate($salaryValue);
 	}	
 }
